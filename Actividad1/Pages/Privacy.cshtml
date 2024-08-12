@@ -1,0 +1,16 @@
+﻿@page
+@model Actividad1.Pages.PrivacyModel
+@{
+    ViewData["Title"] = "Actividad2";
+}
+
+<h2>@Model.Message</h2>
+
+<p>Total de usuarios que accedieron: @Model.UserCount</p>
+<p>Veces que has recargado esta página: @Model.PageReloadCount</p>
+
+<form method="post">
+  
+    <input type="hidden" id="reloadCount" name="reloadCount" value="@Model.PageReloadCount" />
+    <input type="submit" value="Recargar Página" />
+</form>
